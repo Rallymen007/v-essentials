@@ -37,6 +37,10 @@ function toggleHUD() {
 		natives.displayHud(hudEnabled);
 		natives.displayRadar(hudEnabled);
 		natives.displayAreaName(hudEnabled);
+		natives.displayPlayerNames(hudEnabled);
+		natives.setDisplayPlayerNameAndIcon(natives.getPlayerId(), false);
+		triggerNetworkEvent("sb.msg", " has " + (hudEnabled?"shown":"hidden") + " their HUD");
+
 	}
 }
 
